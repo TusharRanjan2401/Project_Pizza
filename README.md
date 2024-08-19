@@ -13,8 +13,9 @@ cd frontend
 npm start
 ```
 For backend
+```bash
 cd backend
-```npm start
+npm start
 ```
 ## Author
 https://github.com/TusharRanjan2401
