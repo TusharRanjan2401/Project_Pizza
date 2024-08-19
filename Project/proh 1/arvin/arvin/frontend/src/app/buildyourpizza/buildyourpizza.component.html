@@ -1,0 +1,21 @@
+<div class="main_body">
+    <div><p>Make your own Pizza by choosing Toppings and Ingredients from Below</p></div>
+<div class="table-responsive">
+    <table class="table table-striped">
+      <tbody>
+        <tr *ngFor="let ingredient of ingredients">
+            <td><img [src]="ingredient.image" width="60" height="60"></td>
+          <td>{{ ingredient.tname }}  ₹{{ ingredient.price }}.00</td>  
+          <td><input type="checkbox" [(ngModel)]="ingredient.selected" (change)="toggleSelection(ingredient)">Add</td>  
+        </tr>
+        <tr>Total cost: ₹{{ totalCost }} </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td><button class="btn btn-warning" (click)="addIngredientstoCart(selectedIngredients)">Add to Cart</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>

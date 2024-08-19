@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" *ngFor="let pizza of pizzadata">
+            <div class="card">
+                <div class="card-body row">
+                    <div class="col-md-4">
+                        <h5 class="card-title">{{ pizza.name }}</h5>
+                        <br/>
+           <div class="type-indicator">
+               <span [ngStyle]="{'background-color': pizza.type === 'veg' ? 'green' : 'red'}" class="square"></span>
+             </div>
+           <b><span>&#8377;</span><span>{{ pizza.price }}</span></b>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="card-text">{{ pizza.description }}</p>
+                        <p class="card-text">Ingredients: {{ pizza.ingredients }}</p>
+                        <p class="card-text">Toppings: {{ pizza.topping }}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img [src]="pizza.image" width="150px" height="150px">
+                        <button class="btn btn-warning" (click)="addtocart(pizza.name, pizza.price, 1,pizza.image,pizza.type)" >Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- {% if loop.index is divisibleby(2) %} -->
+    </div>
+    <div class="row">
+        <!-- {% endif %}
+        {% endfor %} -->
+    </div>
+</div>

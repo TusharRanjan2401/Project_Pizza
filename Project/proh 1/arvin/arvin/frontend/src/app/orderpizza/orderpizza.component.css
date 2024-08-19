@@ -1,0 +1,12 @@
+.type-indicator {
+    align-items: center;
+    
+   }
+   
+   .square {
+     width: 20px;
+     height: 20px; 
+     display: inline-block;
+     border-radius: 3px; 
+     margin-bottom: 10px;
+   }

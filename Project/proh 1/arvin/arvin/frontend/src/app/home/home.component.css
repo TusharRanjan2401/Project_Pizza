@@ -1,0 +1,13 @@
+.body{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.mid_body.ingredients{
+    align-items: center;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
